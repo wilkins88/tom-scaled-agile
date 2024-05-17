@@ -1,18 +1,23 @@
-# Salesforce DX Project: Next Steps
+# Tom Scaled Agile
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+# Getting Started
 
-## How Do You Plan to Deploy Your Changes?
+Connect to your developer org or scratch rog and run:
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+```shell
+npm install
+npm run bootstrap
+```
 
-## Configure Your Salesforce DX Project
+This will deploy everything and run a couple scripts to initialize permission set assignment, page layout assignment, etc.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+# Additions
 
-## Read All About It
+- Added unique constraint to registration code (since codes should be unique among meetups)
+- Added external id constraint to registration code for indexing on queries
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+# Notes and Other Thoughts
+
+- Would consider value of master/detail, what are we getting? Defer to lookup unless there is an explicit reason to use master/detail -- also may introduce greater risk of record locking at scale, visibility (should registrants see other registrations?)
+- Should we add a required constaint to registration code on meetup? Not in the requirements but would make sense unless there is the notion of "back office" support for creationg meetups and registering users
+- Sharing restrictions, went public read since that makes the most sense (organizers and registrants) in the absense of reqs
