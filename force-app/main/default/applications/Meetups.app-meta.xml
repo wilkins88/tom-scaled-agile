@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
         <headerColor>#0070D2</headerColor>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
-    <description
-  >Application for managing and facilitating meetups.</description>
+    <description>Application for managing and facilitating meetups.</description>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
@@ -13,6 +12,9 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Meetups</label>
     <navType>Standard</navType>
+    <tabs>Meetup__c</tabs>
+    <tabs>MeetupRegistration__c</tabs>
+    <tabs>Registration</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Meetups_UtilityBar</utilityBar>
 </CustomApplication>

@@ -1,10 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description
-  >Permissions for users that need to create and manage meetup data.</description>
+    <applicationVisibilities>
+        <application>Meetups</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <description>Permissions for users that need to create and manage meetup data.</description>
     <fieldPermissions>
         <editable>false</editable>
         <field>Meetup__c.RegistrationCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Meetup__c.Registrations__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -32,4 +40,12 @@
         <object>Meetup__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <tabSettings>
+        <tab>MeetupRegistration__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Meetup__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
 </PermissionSet>

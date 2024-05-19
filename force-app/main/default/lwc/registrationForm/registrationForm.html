@@ -1,0 +1,39 @@
+<template>
+  <template if:true={showForm}>
+    <lightning-card title="Details">
+      <lightning-layout multiple-rows>
+        <lightning-layout-item size="4" padding="around-small">
+          <lightning-input
+            data-id="firstName"
+            type="text"
+            label="First name"
+            required
+          ></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" padding="around-small">
+          <lightning-input
+            data-id="lastName"
+            type="text"
+            label="Last Name"
+            required
+          ></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" padding="around-small">
+          <lightning-input
+            data-id="email"
+            type="email"
+            label="Email"
+            required
+          ></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" padding="around-small">
+          <lightning-button
+            label="Submit"
+            variant="brand"
+            onclick={onFormSubmission}
+          ></lightning-button>
+        </lightning-layout-item>
+      </lightning-layout>
+    </lightning-card>
+  </template>
+</template>

@@ -1,0 +1,15 @@
+<template>
+  <template if:true={showNotification}>
+    <lightning-card>
+      <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+        <lightning-icon
+          icon-name="utility:error"
+          alternative-text="Error"
+          title="Error"
+          variant="inverse"
+        ></lightning-icon>
+        <h2 style="margin-left: 10px">{errorMessage}</h2>
+      </div>
+    </lightning-card>
+  </template>
+</template>

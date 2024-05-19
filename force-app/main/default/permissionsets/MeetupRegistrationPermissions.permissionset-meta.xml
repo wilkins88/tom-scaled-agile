@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>Meetups</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <classAccesses>
+        <apexClass>MeetupRegistrationController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <description
   >Permissions needed for a user to interact with the meetup registration page.</description>
     <fieldPermissions>
         <editable>false</editable>
         <field>Meetup__c.RegistrationCode__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Meetup__c.Registrations__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -32,4 +45,8 @@
         <object>Meetup__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <tabSettings>
+        <tab>Registration</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
 </PermissionSet>
